@@ -16,6 +16,8 @@ function totalPrice(json) {
   return totalPrice
 }
 
+//console.log(totalPrice(json[1]))
+
 function totalSubCart(json) {
 
   const quantity = json.item_quantity
@@ -23,6 +25,7 @@ function totalSubCart(json) {
   const totalSubCart = parseFloat(quantity * unitPrice)
   return totalSubCart
 }
+//console.log(totalPrice(json[1]))
 
 function cartTotal(json) {
   const discount = json.item_discount
@@ -30,6 +33,7 @@ function cartTotal(json) {
   return cartTotal
 }
 
+// console.log(cartTotal(json[1]))
 
 function paymentsOneValue(json) {
   const cartTotalValue = cartTotal(json)
@@ -37,16 +41,21 @@ function paymentsOneValue(json) {
   const paymentsValue = cartTotalValue * value
   return paymentsValue
 }
+//console.log(paymentsOneValue(json[1]))
 
-function paymentsOneChange(json) {
+function paymentsOneChangeFor(json) {
   const paymentsValue = paymentsOneValue(json)
-  const changeFor = X
   if (json['payments_payment[1]_method'] == "CASH") {
     const toPay = paymentsValue * 0.07
     const totalPay = paymentsValue + toPay
-    return totalPay - changeFor
+    return totalPay
+  }
+  else {
+    return 0
   }
 }
+
+//console.log(paymentsOneChangeFor(json[1]))
 
 function paymentsTwoValue(json) {
   const cartTotalValue = cartTotal(json)
@@ -55,17 +64,64 @@ function paymentsTwoValue(json) {
   return paymentsValue
 }
 
+//console.log(paymentsTwoValue(json[1]))
 
-function paymentsTwoChange(json) {
-
+function paymentsTwoChangeFor(json) {
   const paymentsValue = paymentsTwoValue(json)
-  //const changeFor = X
   if (json['payments_payment[2]_method'] == "CASH") {
     const toPay = paymentsValue * 0.11
     const totalPay = paymentsValue + toPay
-    return totalPay //- changeFor
+    return totalPay
+  }
+  else {
+    return 0
   }
 }
+
+//console.log(paymentsTwoChangeFor(json[1]))
+
+function totalInCash(json) {
+  const valueOne = paymentsOneValue(json)
+  const valueTwo = paymentsTwoValue(json)
+
+  if (json['payments_payment[1]_method'] == "CASH" && json['payments_payment[2]_method'] == "CASH") {
+    return valueOne + valueTwo
+  } else if (json['payments_payment[1]_method'] == "CASH" && json['payments_payment[2]_method'] != "CASH") {
+    return valueOne
+  } else if (json['payments_payment[1]_method'] != "CASH" && json['payments_payment[2]_method'] == "CASH") {
+    return valueTwo
+  } else if (json['payments_payment[1]_method'] != "CASH" && json['payments_payment[2]_method'] != "CASH") {
+    return 0
+  }
+}
+
+
+function chargesChange(json) {
+
+  const valueOneChange = paymentsOneValue(json) * 0.07
+  const valueTwoChange = paymentsTwoValue(json) * 0.11
+
+  if (json['payments_payment[1]_method'] == "CASH" && json['payments_payment[2]_method'] == "CASH") {
+
+    return valueOneChange + valueTwoChange
+
+  } else if (json['payments_payment[1]_method'] == "CASH" && json['payments_payment[2]_method'] != "CASH") {
+
+    return valueOneChange
+
+  } else if (json['payments_payment[1]_method'] != "CASH" && json['payments_payment[2]_method'] == "CASH") {
+
+    return valueTwoChange
+
+  } else if (json['payments_payment[1]_method'] != "CASH" && json['payments_payment[2]_method'] != "CASH") {
+
+    return 0
+  }
+
+}
+
+console.log(chargesChange(json[2]))
+
 
 
 // função para 1/2/3
@@ -83,6 +139,6 @@ function groupBy(json, regex) {
   }
   console.log(newArray)
 }
-groupBy(json, regexItem)
+//groupBy(json, regexItem)
 
 
