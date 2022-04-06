@@ -45,6 +45,7 @@ Projeto de estágio desenvolvido pelo Quiq para inclusão de mulheres na área t
 
 ## Módulo 02
 
+### Conteúdos 
 * NodeJS: crie uma API REST padronizada e escalável 
 * ORM com NodeJS: API com Sequelize e MySQL
 * NodeJS: Crie uma API REST com controle de versão
@@ -53,8 +54,6 @@ Projeto de estágio desenvolvido pelo Quiq para inclusão de mulheres na área t
   {"prazo cursos"} : "11/04/2022"
   {"prazo case"} : "18/04/2022"
 ```
-
-### Conteúdos 
 
 ## Módulo 03
 ## Módulo 04
