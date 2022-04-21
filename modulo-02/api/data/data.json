@@ -1,0 +1,28 @@
+{
+  "merchant": "Outback SteakHouse",
+  "merchantId": 1,
+  "brandId": "1",
+  "address": {
+    "country": "Brasil",
+    "state": "RJ",
+    "city": "Rio de Janeiro",
+    "neighborhood": "Barra da Tijuca",
+    "streetName": "Avenida do Estado",
+    "number": 121,
+    "postalCode": 98680149,
+    "coordinates": {
+      "latitude": -97423,
+      "longitude": -5419788
+    }
+  },
+  "operationPeriod": {
+    "dayOfWeek": "Wednesday-Sunday",
+    "startDateTime": "11:00",
+    "finishDateTime": "01:00"
+  },
+  "averageTicket": {
+    "total": "R$3.105.980,19"
+  },
+  "status": "On",
+  "message": ""
+}

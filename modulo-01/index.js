@@ -8,7 +8,7 @@ const regexCustomer = /customer_.+/
 const regexCart = /cart_.+/
 const regexPayments = /payments_.+/
 
-
+// function for item_totalPrice
 function totalPrice(json) {
   const quantity = json.item_quantity
   const unitPrice = json.item_unitPrice
@@ -17,7 +17,7 @@ function totalPrice(json) {
 }
 
 //console.log(totalPrice(json[1]))
-
+// function for cart_subtotal and payments_charges_subTotal"
 function totalSubCart(json) {
 
   const quantity = json.item_quantity
@@ -26,7 +26,7 @@ function totalSubCart(json) {
   return totalSubCart
 }
 //console.log(totalPrice(json[1]))
-
+//function for carttotal
 function cartTotal(json) {
   const discount = json.item_discount
   const cartTotal = totalSubCart(json) - discount
@@ -35,6 +35,7 @@ function cartTotal(json) {
 
 // console.log(cartTotal(json[1]))
 
+//function for payments_payment[1]_value"
 function paymentsOneValue(json) {
   const cartTotalValue = cartTotal(json)
   const value = 0.33
@@ -43,7 +44,7 @@ function paymentsOneValue(json) {
 }
 //console.log(paymentsOneValue(json[1]))
 
-
+// function for payments_payment[1]_changeFor
 function paymentsOneChangeFor(json) {
   const paymentsValue = paymentsOneValue(json)
   if (json['payments_payment[1]_method'] !== "CASH") return 0;
@@ -55,6 +56,7 @@ function paymentsOneChangeFor(json) {
 
 console.log(paymentsOneChangeFor(json[1]))
 
+// function for payments_payment[2]_value"
 function paymentsTwoValue(json) {
   const cartTotalValue = cartTotal(json)
   const value = 0.67
@@ -64,6 +66,7 @@ function paymentsTwoValue(json) {
 
 //console.log(paymentsTwoValue(json[1]))
 
+//function for "payments_payment[2]_changeFor"
 function paymentsTwoChangeFor(json) {
   const paymentsValue = paymentsTwoValue(json)
   if (json['payments_payment[2]_method'] !== "CASH") return 0
@@ -74,7 +77,7 @@ function paymentsTwoChangeFor(json) {
 
 
 //console.log(paymentsTwoChangeFor(json[1]))
-
+//function for payments_charges_totalInCash":
 function totalInCash(json) {
   const valueOne = paymentsOneValue(json)
   const valueTwo = paymentsTwoValue(json)
@@ -90,7 +93,7 @@ function totalInCash(json) {
   }
 }
 
-
+//  function for "payments_charges_change"
 function chargesChange(json) {
 
   const valueOneChange = paymentsOneValue(json) * 0.07
@@ -109,7 +112,7 @@ function chargesChange(json) {
 }
 
 
-// função para 1/2/3
+// function for exercices 1,2 and 3
 function groupBy(json, regex) {
   const newArray = []
   for (let object of json) {
