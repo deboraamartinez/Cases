@@ -1,28 +1,284 @@
-{
-  "merchant": "Outback SteakHouse",
-  "merchantId": 1,
-  "brandId": "1",
-  "address": {
-    "country": "Brasil",
-    "state": "RJ",
-    "city": "Rio de Janeiro",
-    "neighborhood": "Barra da Tijuca",
-    "streetName": "Avenida do Estado",
-    "number": 121,
-    "postalCode": 98680149,
-    "coordinates": {
-      "latitude": -97423,
-      "longitude": -5419788
-    }
+[
+  {
+    "merchant": "Outback SteakHouse",
+    "merchantId": 1,
+    "brand": true,
+    "brandId": 1,
+    "address": {
+      "country": "Brasil",
+      "state": "RJ",
+      "city": "Rio de Janeiro",
+      "neighborhood": "Barra da Tijuca",
+      "streetName": "Avenida do Estado",
+      "number": 121,
+      "postalCode": 98680149,
+      "coordinates": {
+        "latitude": -97423,
+        "longitude": -5419788
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Wednesday-Sunday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "01:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$3.105.980,19"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Indoor",
+      "Delivery",
+      "Takeaway"
+    ],
+    "categories": [
+      1,
+      3,
+      4,
+      7,
+      10,
+      13,
+      14,
+      15
+    ]
   },
-  "operationPeriod": {
-    "dayOfWeek": "Wednesday-Sunday",
-    "startDateTime": "11:00",
-    "finishDateTime": "01:00"
+  {
+    "merchant": "Rei do Mate Francis",
+    "merchantId": 2,
+    "brand": true,
+    "brandId": 2,
+    "address": {
+      "country": "Brasil",
+      "state": "RS",
+      "city": "Porto Alegre",
+      "neighborhood": "Navegantes",
+      "streetName": "Avenida Francis",
+      "number": 1830,
+      "postalCode": 10980190,
+      "coordinates": {
+        "latitude": 654234,
+        "longitude": 436534
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Tuesday-Thursday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "22:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$3.105.980,19"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Indoor",
+      "Delivery",
+      "Takeaway"
+    ],
+    "categories": [
+      1,
+      3,
+      4,
+      11,
+      12,
+      14
+    ]
   },
-  "averageTicket": {
-    "total": "R$3.105.980,19"
+  {
+    "merchant": "Outback Jundiai",
+    "merchantId": 3,
+    "brand": false,
+    "brandId": 1,
+    "address": {
+      "country": "Brasil",
+      "state": "SP",
+      "city": "Jundiai",
+      "neighborhood": "Barra de Jundiai",
+      "streetName": "Rua Pedro",
+      "number": 32,
+      "postalCode": 98089589,
+      "coordinates": {
+        "latitude": 21414,
+        "longitude": 9342
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Saturday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "14:00"
+        },
+        {
+          "startDateTime": "17:00",
+          "finishDateTime": "02:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$3.105.980,19"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Indoor",
+      "Delivery"
+    ],
+    "categories": [
+      1,
+      3,
+      4,
+      7,
+      10,
+      13,
+      14,
+      15
+    ]
   },
-  "status": "On",
-  "message": ""
-}
+  {
+    "merchant": "Outback Max Ville",
+    "merchantId": 4,
+    "brand": false,
+    "brandId": 1,
+    "address": {
+      "country": "Brasil",
+      "state": "MG",
+      "city": "Extrema",
+      "neighborhood": "VaiVai",
+      "streetName": "Estrada das Oliveiras",
+      "number": 990,
+      "postalCode": 37604000,
+      "coordinates": {
+        "latitude": 985435,
+        "longitude": 23724
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Saturday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "14:00"
+        },
+        {
+          "startDateTime": "17:00",
+          "finishDateTime": "02:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$1.890.359,09"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Delivery",
+      "Takeaway"
+    ],
+    "categories": [
+      1,
+      3,
+      4,
+      7,
+      10,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "merchant": "Outback Patio Savassi",
+    "merchantId": 5,
+    "brand": false,
+    "brandId": 1,
+    "address": {
+      "country": "Brasil",
+      "state": "MG",
+      "city": "Belo Horizonte",
+      "neighborhood": "VaiVai",
+      "streetName": "Avenida do Contorno",
+      "number": 6061,
+      "postalCode": 30110929,
+      "coordinates": {
+        "latitude": -89734,
+        "longitude": 12783
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Wednesday-Sunday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "01:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$1.751.963,33"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Indoor",
+      "Delivery",
+      "Takeaway"
+    ],
+    "categories": [
+      1,
+      3,
+      4,
+      7,
+      10,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "merchant": "Rei do Mate Lago Azul",
+    "merchantId": 6,
+    "brand": false,
+    "brandId": 2,
+    "address": {
+      "country": "Brasil",
+      "state": "PA",
+      "city": "Belém",
+      "neighborhood": "Navios",
+      "streetName": "Rua Calangos",
+      "number": 756,
+      "postalCode": 50919340,
+      "coordinates": {
+        "latitude": 98412,
+        "longitude": 436534
+      }
+    },
+    "operationPeriod": {
+      "dayOfWeek": "Tuesday-Thursday",
+      "shifts": [
+        {
+          "startDateTime": "11:00",
+          "finishDateTime": "22:00"
+        }
+      ]
+    },
+    "averageTicket": {
+      "total": "R$998.419,90"
+    },
+    "status": "On",
+    "message": "",
+    "services": [
+      "Indoor",
+      "Delivery"
+    ],
+    "categories": []
+  }
+]
