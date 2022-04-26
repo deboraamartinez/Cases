@@ -56,6 +56,42 @@ Projeto de estágio desenvolvido pelo Quiq para inclusão de mulheres na área t
 ```
 
 ## Módulo 03
+
+### Conteúdos
+* SOLID com Java: Princípios da programação orientada a objetos
+* Java e Clean Architecture: Descomplicando arquitetura de software
+* Java e Domain Driven Design: Apresentando os conceitos 
+* Modelagem de banco de dados: Começando com NoSQL 
+* Docker: Criando containers sem dor de cabeça
+* Swagger: Documentando suas APIs
+
+```bash
+  {"prazo cursos"} : "09/05/2022"
+  {"prazo case"} : "16/05/2022"
+```
+
 ## Módulo 04
+
+### Conteúdos
+* Microsserviços: Padrões de projeto 
+* Fundamentos de Microsserviços: Se aprofundando nos conceitos
+* AWS SQS: Mensageria e desacoplamento de sistemas
+* Amazon EKS: Gerenciando aplicações conteinerizadas com Kubernetes
+
+```bash
+  {"prazo cursos"} : "23/05/2022"
+  {"prazo case"} : "30/05/2022"
+```
+
+
 ## Módulo 05
 
+### Conteúdos
+* Aplicações Serverless: Construindo uma API REST
+* Amazon Cognito: autenticação como serviço 
+* Amazon S3: Manipule e armazene objetos na nuvem
+
+```bash
+  {"prazo cursos"} : "13/06/2022"
+  {"prazo case"} : "20/06/2022"
+```
