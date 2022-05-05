@@ -1,10 +1,7 @@
-const bodyParser = require('body-parser')
-const merchants = require('./merchantsRoute')
+const express = require("express");
+const merchants = require("./merchantsRoute");
 
-
-module.exports = app => {
-  app.use(
-    bodyParser.json(),
-    merchants
-  )
-}
+// interessante!
+module.exports = (app) => {
+  app.use(express.json({ limit: "10mb" }), merchants);
+};
