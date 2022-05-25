@@ -2,7 +2,7 @@ const bodyParser = require('body-parser')
 const merchants = require('./merchantsRoute')
 const brands = require('./brandsRoute')
 const shifts = require('./shiftsRoute')
-const addresses = require('./addressRoute')
+const adresses = require('./addressRoute')
 const services = require('./serviceRoute')
 const categories = require('./categoryRoute')
 
@@ -13,7 +13,7 @@ module.exports = app => {
     merchants,
     brands,
     shifts,
-    addresses,
+    adresses,
     services,
     categories
   )

@@ -5,10 +5,10 @@ const router = Router()
 
 //Address
 
-router.get('/addresses', AddressController.readAllAddresses)
-router.get('/addresses/:id', AddressController.readOneAddress)
-router.post('/addresses', AddressController.createAddress)
-router.put('/addresses/:id', AddressController.updateAddresses)
-router.delete('/addresses/:id', AddressController.deleteAddress)
+router.get('/adresses', AddressController.readAllAdresses)
+router.get('/adresses/:id', AddressController.readOneAddress)
+router.post('/adresses', AddressController.createAddress)
+router.put('/adresses/:id', AddressController.updateAddress)
+router.delete('/adresses/:id', AddressController.deleteAddress)
 
 module.exports = router

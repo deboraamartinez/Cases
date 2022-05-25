@@ -96,6 +96,74 @@ class BrandController {
       return res.status(500).json(error.message)
     }
   }
+
+  // SHIFTS
+  static async readBrandShifts(req, res) {
+    const { id } = req.params
+    try {
+      const oneShift = await database.Shifts.findAll({
+        where:
+        {
+          brandId: Number(id),
+        }
+      })
+      return res.status(200).json(oneShift)
+    }
+    catch (error) {
+      return res.status(500).json(error.message)
+    }
+  }
+
+  // Services
+  static async readBrandServices(req, res) {
+    const { id } = req.params
+    try {
+      const oneService = await database.Services.findAll({
+        where:
+        {
+          brandId: Number(id),
+        }
+      })
+      return res.status(200).json(oneService)
+    }
+    catch (error) {
+      return res.status(500).json(error.message)
+    }
+  }
+  // Address
+  static async readBrandAddress(req, res) {
+    const { id } = req.params
+    try {
+      const oneAddress = await database.Addresses.findAll({
+        where:
+        {
+          brandId: Number(id),
+        }
+      })
+      return res.status(200).json(oneAddress)
+    }
+    catch (error) {
+      return res.status(500).json(error.message)
+    }
+  }
+
+
+  //Categories
+  static async readBrandCategories(req, res) {
+    const { id } = req.params
+    try {
+      const oneCategory = await database.Categories.findAll({
+        where:
+        {
+          brandId: Number(id),
+        }
+      })
+      return res.status(200).json(oneCategory)
+    }
+    catch (error) {
+      return res.status(500).json(error.message)
+    }
+  }
 }
 
 module.exports = BrandController

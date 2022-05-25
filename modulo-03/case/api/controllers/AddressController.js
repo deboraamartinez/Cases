@@ -3,10 +3,10 @@ const database = require('../models')
 class AddressController {
 
   // Addresses
-  static async readAllAddresses(req, res) {
+  static async readAllAdresses(req, res) {
     try {
-      const allAddresses = await database.Addresses.findAll()
-      return res.status(200).json(allAddresses)
+      const allAdresses = await database.Addresses.findAll()
+      return res.status(200).json(allAdresses)
     }
     catch (error) {
       return res.status(500).json(error.message)
@@ -35,7 +35,7 @@ class AddressController {
     }
   }
 
-  static async updateAddresses(req, res) {
+  static async updateAddress(req, res) {
     const { id } = req.params
     const newInfo = req.body
     try {

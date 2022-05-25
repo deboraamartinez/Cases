@@ -17,6 +17,12 @@ router.delete('/merchants/:id', MerchantController.deleteMerchant)
 router.get('/merchants/:id/shifts', MerchantController.readMerchantShifts)
 
 // Address
-router.get('/merchants/:id/address', MerchantController.readMerchantAddress)
+router.get('/merchants/:id/adresses', MerchantController.readMerchantAddress)
+
+//Categories
+router.get('/merchants/:id/categories', MerchantController.readMerchantCategories)
+
+//Services
+router.get('/merchants/:id/services', MerchantController.readMerchantServices)
 
 module.exports = router

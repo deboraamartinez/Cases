@@ -94,13 +94,13 @@ class MerchantController {
   static async readMerchantServices(req, res) {
     const { id } = req.params
     try {
-      const oneService = await database.Service.findAll({
+      const oneService = await database.Services.findAll({
         where:
         {
           merchantId: Number(id),
         }
       })
-      return res.status(200).json(oneShift)
+      return res.status(200).json(oneService)
     }
     catch (error) {
       return res.status(500).json(error.message)
@@ -110,7 +110,7 @@ class MerchantController {
   static async readMerchantAddress(req, res) {
     const { id } = req.params
     try {
-      const oneAddress = await database.Addresses.findOne({
+      const oneAddress = await database.Addresses.findAll({
         where:
         {
           merchantId: Number(id),
@@ -122,7 +122,26 @@ class MerchantController {
       return res.status(500).json(error.message)
     }
   }
+
+
+  //Categories
+  static async readMerchantCategories(req, res) {
+    const { id } = req.params
+    try {
+      const oneCategory = await database.Categories.findAll({
+        where:
+        {
+          merchantId: Number(id),
+        }
+      })
+      return res.status(200).json(oneCategory)
+    }
+    catch (error) {
+      return res.status(500).json(error.message)
+    }
+  }
 }
+
 
 
 module.exports = MerchantController
