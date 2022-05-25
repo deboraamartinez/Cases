@@ -4,11 +4,20 @@ class MerchantController {
 
   static async readAllMerchants(req, res) {
     try {
-      const allMerchants = await database.Merchants.findAll({
+      const allMerchants = await database.Merchants.findAll(({
         include: [{
+          model: database.Addresses
+        },
+        {
+          model: database.Categories
+        },
+        {
+          model: database.Shifts
+        },
+        {
           model: database.Services
         }]
-      })
+      }))
       return res.status(200).json(allMerchants)
     }
     catch (error) {
@@ -71,7 +80,7 @@ class MerchantController {
       const oneShift = await database.Shifts.findAll({
         where:
         {
-          merchant_id: Number(id),
+          merchantId: Number(id),
         }
       })
       return res.status(200).json(oneShift)
@@ -88,7 +97,7 @@ class MerchantController {
       const oneService = await database.Service.findAll({
         where:
         {
-          merchant_id: Number(id),
+          merchantId: Number(id),
         }
       })
       return res.status(200).json(oneShift)
@@ -104,7 +113,7 @@ class MerchantController {
       const oneAddress = await database.Addresses.findOne({
         where:
         {
-          merchant_id: Number(id),
+          merchantId: Number(id),
         }
       })
       return res.status(200).json(oneAddress)
