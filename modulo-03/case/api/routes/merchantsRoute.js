@@ -3,26 +3,20 @@ const MerchantController = require('../controllers/MerchantController')
 
 const router = Router()
 
-// matriz e filial
-router.get('/merchants/brand', MerchantController.readMerchantByBrand)
-
-// Status
-router.get('/merchants/status', MerchantController.readMerchantByStatus)
-router.put('/merchants/:id/status', MerchantController.updateStatus)
-
-
-//mensagem
-
-router.put('/merchants/:id/message', MerchantController.sendMensagem)
-
 //merchant
 
-router.post('/merchants', MerchantController.createMerchant)
 router.get('/merchants', MerchantController.readAllMerchants)
 router.get('/merchants/:id', MerchantController.readOneMerchant)
+router.post('/merchants', MerchantController.createMerchant)
 router.put('/merchants/:id', MerchantController.updateMerchant)
 router.delete('/merchants/:id', MerchantController.deleteMerchant)
 
 
+// Shifts
+
+router.get('/merchants/:id/shifts', MerchantController.readMerchantShifts)
+
+// Address
+router.get('/merchants/:id/address', MerchantController.readMerchantAddress)
 
 module.exports = router
