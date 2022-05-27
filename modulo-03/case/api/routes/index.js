@@ -5,6 +5,7 @@ const shifts = require('./shiftsRoute')
 const adresses = require('./addressRoute')
 const services = require('./serviceRoute')
 const categories = require('./categoryRoute')
+const messages = require('./messageRoute')
 
 
 module.exports = app => {
@@ -15,6 +16,7 @@ module.exports = app => {
     shifts,
     adresses,
     services,
-    categories
+    categories,
+    messages
   )
 }
